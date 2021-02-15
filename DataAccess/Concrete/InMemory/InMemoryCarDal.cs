@@ -16,11 +16,11 @@ namespace DataAccess.Concrete
         {
             _cars = new List<Car> 
             {
-                new Car{CarId=1, BrandId=1, ColorId=1, ModelYear=2005, Description="Otomatik, Dizel", DailyPrice=20000},
-                new Car{CarId=2, BrandId=2, ColorId=2, ModelYear=2010, Description="Manuel, Dizel", DailyPrice=30000},
-                new Car{CarId=3, BrandId=3, ColorId=1, ModelYear=2012, Description="Otomatik, Benzinli", DailyPrice=45000},
-                new Car{CarId=4, BrandId=1, ColorId=3, ModelYear=2006, Description="Otomatik, Dizel", DailyPrice=35000},
-                new Car{CarId=5, BrandId=2, ColorId=2, ModelYear=2005, Description="Manuel, Benzinli", DailyPrice=20000},
+                new Car{CarId=1, BrandId=1, ColorId=1, ModelYear=2005, Descriptions="Otomatik, Dizel", DailyPrice=20000},
+                new Car{CarId=2, BrandId=2, ColorId=2, ModelYear=2010, Descriptions="Manuel, Dizel", DailyPrice=30000},
+                new Car{CarId=3, BrandId=3, ColorId=1, ModelYear=2012, Descriptions="Otomatik, Benzinli", DailyPrice=45000},
+                new Car{CarId=4, BrandId=1, ColorId=3, ModelYear=2006, Descriptions="Otomatik, Dizel", DailyPrice=35000},
+                new Car{CarId=5, BrandId=2, ColorId=2, ModelYear=2005, Descriptions="Manuel, Benzinli", DailyPrice=20000},
             };
         }
         public void Add(Car car)
@@ -60,7 +60,7 @@ namespace DataAccess.Concrete
             carToUpdate.BrandId = car.BrandId;
             carToUpdate.ColorId = car.ColorId;
             carToUpdate.ModelYear = car.ModelYear;
-            carToUpdate.Description = car.Description;
+            carToUpdate.Descriptions = car.Descriptions;
             carToUpdate.DailyPrice = car.DailyPrice;
         }
     }
