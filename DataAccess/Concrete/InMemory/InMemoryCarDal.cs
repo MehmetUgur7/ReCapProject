@@ -3,6 +3,7 @@ using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 
 namespace DataAccess.Concrete
@@ -15,11 +16,11 @@ namespace DataAccess.Concrete
         {
             _cars = new List<Car> 
             {
-                new Car{CarId=1, BrandId=1, BrandName="Volkswagen",ColorId=1, ModelYear=2005, Description="Otomatik, Dizel", DailyPrice=20000},
-                new Car{CarId=2, BrandId=2, BrandName="Ford", ColorId=2, ModelYear=2010, Description="Manuel, Dizel", DailyPrice=30000},
-                new Car{CarId=3, BrandId=3, BrandName="Opel", ColorId=1, ModelYear=2012, Description="Otomatik, Benzinli", DailyPrice=45000},
-                new Car{CarId=4, BrandId=1, BrandName="Volkswagen", ColorId=3, ModelYear=2006, Description="Otomatik, Dizel", DailyPrice=35000},
-                new Car{CarId=5, BrandId=2, BrandName="Ford", ColorId=2, ModelYear=2005, Description="Manuel, Benzinli", DailyPrice=20000},
+                new Car{CarId=1, BrandId=1, ColorId=1, ModelYear=2005, Description="Otomatik, Dizel", DailyPrice=20000},
+                new Car{CarId=2, BrandId=2, ColorId=2, ModelYear=2010, Description="Manuel, Dizel", DailyPrice=30000},
+                new Car{CarId=3, BrandId=3, ColorId=1, ModelYear=2012, Description="Otomatik, Benzinli", DailyPrice=45000},
+                new Car{CarId=4, BrandId=1, ColorId=3, ModelYear=2006, Description="Otomatik, Dizel", DailyPrice=35000},
+                new Car{CarId=5, BrandId=2, ColorId=2, ModelYear=2005, Description="Manuel, Benzinli", DailyPrice=20000},
             };
         }
         public void Add(Car car)
@@ -33,9 +34,19 @@ namespace DataAccess.Concrete
             _cars.Remove(carToDelete);
         }
 
+        public Car Get(Expression<Func<Car, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Car> GetAll()
         {
             return _cars;
+        }
+
+        public List<Car> GetAll(Expression<Func<Car, bool>> filter = null)
+        {
+            throw new NotImplementedException();
         }
 
         public List<Car> GetAllByBrand(int BrandId)
