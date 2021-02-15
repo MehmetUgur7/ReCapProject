@@ -21,4 +21,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="ColorId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="8f93911c-49dd-4f57-95ed-8559457960cc" ChangeDateTime="02/15/2021 08:04:24">
+    <Property Name="ElementName" Value="[dbo].[FK_Cars_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Cars]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[Brand_Car]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="b319e83f-cacb-4658-870e-9f31a66f95e3" ChangeDateTime="02/15/2021 08:13:10">
+    <Property Name="ElementName" Value="[dbo].[Brands].[Brand.ıd]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Brands]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Brand.Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="5a2a2145-6f97-49ed-8d77-b1a34f57e21b" ChangeDateTime="02/15/2021 08:13:52">
+    <Property Name="ElementName" Value="[dbo].[Brands].[Brand.Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Brands]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BrandId" />
+  </Operation>
 </Operations>

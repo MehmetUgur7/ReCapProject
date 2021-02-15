@@ -56,6 +56,7 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="PublishLocation" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Cars.sql" />
@@ -64,5 +65,8 @@
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="ReCapDatabase.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PublishLocation\ReCapDatabase.publish.xml" />
   </ItemGroup>
 </Project>
