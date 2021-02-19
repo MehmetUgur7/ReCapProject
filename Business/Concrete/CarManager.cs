@@ -36,7 +36,7 @@ namespace Business.Concrete
 
         public IDataResult<Car> GetAllByBrandId(int brandId)
         {
-            return new SuccessDataResult<Car>(_carDal.Get(c=>c.BrandId==brandId));
+            return new SuccessDataResult<Car>(_carDal.Get(c=>c.BrandId==brandId),Messages.CarsListed);
         }
 
         public IDataResult<List<Car>> GetByDailyPrice(int dailyPrice)
