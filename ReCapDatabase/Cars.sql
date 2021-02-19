@@ -7,5 +7,5 @@
     [DailyPrice] DECIMAL NULL, 
     [Descriptions] VARCHAR(200) NULL, 
     CONSTRAINT [Brand_Car] FOREIGN KEY ([BrandId]) REFERENCES [Brands]([BrandId]), 
-    CONSTRAINT [Color_Car] FOREIGN KEY ([ColorId]) REFERENCES [Colors]([ColorId])
+    CONSTRAINT [Color_Car] FOREIGN KEY ([ColorId]) REFERENCES [Colors]([ColorId]) 
 )
