@@ -22,7 +22,7 @@ namespace ConsoleUI
 
             if (result.Success==true)
             {
-                foreach (var car in carManager.GetCarDetails().Data)
+                foreach (var car in result.Data)
                 {
                     Console.WriteLine(car.BrandName + "---" + car.ModelYear + " Model" + "--- Günlük:" + car.DailyPrice + " TL");
                 }
