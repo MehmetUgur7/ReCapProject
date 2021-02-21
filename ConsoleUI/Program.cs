@@ -10,10 +10,23 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            
-            BrandTest();
-            //AddingCar();
 
+            BrandManager brandManager = new BrandManager(new EfBrandDal());
+            brandManager.Add(new Brand { BrandName = "Mitsubishi" });
+            var result = brandManager.GetAll();
+            foreach (var b in result.Data)
+            {
+                Console.WriteLine(b.BrandName);
+            }
+
+
+            //BrandTest();
+            //AddingCar();
+            //CarDelete();
+        }
+
+        private static void CarDelete()
+        {
             CarManager carManager = new CarManager(new EfCarDal());
             carManager.Delete(carManager.GetByCarId(1002).Data);
         }
