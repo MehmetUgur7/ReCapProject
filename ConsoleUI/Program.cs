@@ -10,7 +10,24 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            RentalManager rentalManager = new RentalManager(new EfRentalDal());
+            var result = rentalManager.GetRentalDetails();
 
+            foreach (var r in result.Data)
+            {
+                Console.WriteLine(r.FirstName + " " + r.LastName + "---" + r.BrandName + "---" + r.ColorName + "---" + r.RentDate);
+            }
+            
+            
+            
+            //AddingBrand();
+            //BrandTest();
+            //AddingCar();
+            //CarDelete();
+        }
+
+        private static void AddingBrand()
+        {
             BrandManager brandManager = new BrandManager(new EfBrandDal());
             brandManager.Add(new Brand { BrandName = "Mitsubishi" });
             var result = brandManager.GetAll();
@@ -18,11 +35,6 @@ namespace ConsoleUI
             {
                 Console.WriteLine(b.BrandName);
             }
-
-
-            //BrandTest();
-            //AddingCar();
-            //CarDelete();
         }
 
         private static void CarDelete()

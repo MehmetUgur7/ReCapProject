@@ -14,6 +14,9 @@ namespace Business.Constants
         public static string BrandsListed = "Araba markaları listelendi.";
         public static string BrandDeleted = "Araba markası silindi.";
         public static string ColorAdded = "Araba renk bilgisi eklendi.";
+        public static string RentalAdded = "Araba kiralama bilgisi eklendi.";
+        public static string RentalDeleted = "Araba kiralama bilgisi silindi.";
+        public static string RentalListed = "Araba kiralama bilgileri listelendi.";
 
     }
 }
