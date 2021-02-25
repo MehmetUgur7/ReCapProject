@@ -17,6 +17,7 @@ namespace Business.Constants
         public static string RentalAdded = "Araba kiralama bilgisi eklendi.";
         public static string RentalDeleted = "Araba kiralama bilgisi silindi.";
         public static string RentalListed = "Araba kiralama bilgileri listelendi.";
+        public static string DailyPriceInvalid = "Günlük kiralama bedeli sıfırdan farklı olmalıdır.";
 
     }
 }
