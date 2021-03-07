@@ -171,7 +171,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aspects\Autofac\Validation\Class1.cs" />
+    <Compile Include="Aspects\Autofac\Validation\ValidationAspect.cs" />
     <Compile Include="CrossCuttingConcerns\Validation\ValidationTool.cs" />
     <Compile Include="DataAccess\EntityFramework\EfEntityRepositoryBase.cs" />
     <Compile Include="DataAccess\IEntityRepository.cs" />
