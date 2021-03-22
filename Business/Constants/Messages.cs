@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Business.Constants
@@ -21,5 +22,6 @@ namespace Business.Constants
         public static string UserAdded = "Kullanıcı eklendi";
         public static string UserDeleted = "Kullanıcı silindi";
         public static string UserListed = "Kullanıcılar listelendi";
+        public static string AuthorizationDenied = "Giriş başarısız";
     }
 }

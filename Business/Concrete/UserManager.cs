@@ -1,8 +1,8 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Core.Entities.Concrete;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
-using Entities.Concrete;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
@@ -36,9 +36,9 @@ namespace Business.Concrete
             return new SuccessDataResult<List<User>>(_userDal.GetAll(), Messages.UserListed);
         }
 
-        public IDataResult<List<UserDetailDto>> GetUserDetails()
-        {
-            return new SuccessDataResult<List<UserDetailDto>>(_userDal.GetUserDetails());
-        }
+        //public IDataResult<List<UserDetailDto>> GetUserDetails()
+        //{
+        //    return new SuccessDataResult<List<UserDetailDto>>(_userDal.GetUserDetails());
+        //}
     }
 }
