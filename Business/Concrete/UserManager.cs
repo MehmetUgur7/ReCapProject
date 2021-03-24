@@ -3,10 +3,7 @@ using Business.Constants;
 using Core.Entities.Concrete;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
-using Entities.DTOs;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Business.Concrete
 {
@@ -46,9 +43,6 @@ namespace Business.Concrete
             return _userDal.Get(u => u.Email == email);
         }
 
-        //public IDataResult<List<UserDetailDto>> GetUserDetails()
-        //{
-        //    return new SuccessDataResult<List<UserDetailDto>>(_userDal.GetUserDetails());
-        //}
+        
     }
 }
