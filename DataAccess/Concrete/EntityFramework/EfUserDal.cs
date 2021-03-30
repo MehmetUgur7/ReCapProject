@@ -9,7 +9,7 @@ using DataAccess.Abstract;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-    public class EfUserDal : EfEntityRepositoryBase<User, CarRentalDbContext>, IUserDal
+    public class EfUserDal : EFEntityRepositoryBase<User, CarRentalDbContext>, IUserDal
     {
         public List<OperationClaim> GetClaims(User user)
         {

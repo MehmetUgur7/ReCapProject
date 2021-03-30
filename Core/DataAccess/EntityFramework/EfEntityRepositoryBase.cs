@@ -1,20 +1,20 @@
 ﻿using Core.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
-using Microsoft.EntityFrameworkCore;
-
 
 namespace Core.DataAccess.EntityFramework
 {
-    public class EfEntityRepositoryBase<TEntity, TContext>:IEntityRepository<TEntity>
+    public class EFEntityRepositoryBase<TEntity, TContext>:IEntityRepository<TEntity>
         where TEntity: class, IEntity, new()
         where TContext: DbContext, new()
     {
         public void Add(TEntity entity)
         {
+            //IDisposable pattern implementation of c#
             using (TContext context = new TContext())
             {
                 var addedEntity = context.Entry(entity);
